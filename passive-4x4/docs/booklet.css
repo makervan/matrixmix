@@ -1,0 +1,108 @@
+@page {
+  size: A6;
+  margin: 10mm 13mm 15mm 13mm;
+
+  @bottom-center {
+    content: "Severin Schols. 2024. Maker Van Labs. https://makervan.de/";
+    font-size: 6pt;
+  }
+}
+
+@page :left {
+  /*margin: 10mm 10mm 12mm 15mm;*/
+  /*@top-left { content: counter(page) }
+    #@top-right { content: string(heading); font-variant: small-caps }*/
+}
+
+@page :right {
+  /*margin: 10mm 15mm 12mm 10mm;*/
+  /*@top-left { content: string(heading); font-variant: small-caps }
+    @top-right { content: counter(page) }*/
+}
+
+@page :blank {
+  @top-right {
+    content: none
+  }
+
+  @top-left {
+    content: none
+  }
+}
+
+@page clean {
+  @bottom-center {
+    content: none
+  }
+}
+
+
+html {
+  font-family: "Sora", sans-serif;
+  font-size: 7.5pt;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  /* break-after: page; */
+  font-size: 2.6em;
+  font-weight: normal;
+  padding: 80mm 0 0 0;
+  page: clean;
+}
+
+section {
+  break-after: page;
+  /*padding-top: 25mm;*/
+}
+
+p {
+  hyphens: none;
+  margin-bottom: 6mm;
+  /*text-align: justify;*/
+}
+
+a {
+  hyphens: none;
+  white-space:nowrap;
+}
+
+p.center {
+  text-align: center;
+}
+
+ul {
+  margin: -1.4em 0;
+  padding: 0 5mm;
+}
+
+#qrcodes {
+  width: 100%;
+  margin-top: 20mm;
+}
+
+#qrcodes td {
+  width: 33%;
+  vertical-align: top;
+  text-align: center;
+}
+
+#qrcodes img {
+  width: 16mm;
+}
+
+.oshw-logo {
+  width: 12mm;
+  float: right;
+  margin-left: 4mm;
+  filter: saturate(0%) brightness(60%);
+}
+
+#makervan {
+  width: 15mm;
+  float: right;
+  display: block;
+}
